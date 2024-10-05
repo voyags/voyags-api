@@ -5,7 +5,7 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - MONGODB_URI=mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongodb:27017/voyags
+      - MONGODB_URI=mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongodb:27017/voyags?authSource=admin
       - JWT_SECRET=${JWT_SECRET}
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
     depends_on:
